@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class NeckLacesController extends Controller
 {
     public function index(){
-        $products = Product::where('category_id','=',2)
+        $products = Product::where('category_id','=',1)
             ->where('status',1)
             ->paginate(3);
         $sorts = "default";

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BraceletsController extends Controller
 {
     public function index(){
-        $products = Product::where('category_id','=',5)->where('status',1)->paginate(3);
+        $products = Product::where('category_id','=',4)->where('status',1)->paginate(3);
         $sorts = "default";
         $orders = "default";
         $value = 3;
