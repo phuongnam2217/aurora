@@ -99,7 +99,7 @@ class ProductController extends Controller
 //        $file = $request->file('file');
 //        $fileName = time().".".$file->extension();
 //        $file->move(public_path('images'),$fileName);
-        $filename = $request->file('file')->store('public/images');
+        $filename = $request->file('file')->store('public');
         $image->image = $filename;
         $image->product_id = $id;
         $image->save();
