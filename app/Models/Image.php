@@ -16,6 +16,6 @@ class Image extends Model
         return $this->belongsTo(Product::class);
     }
     function getNameImage(){
-        return '/storage/' .substr($this->image,7);
+        return '/storage/' .ltrim($this->image, 'public/');
     }
 }
