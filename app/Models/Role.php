@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     use HasFactory;
-    public $timestamp = false;
+    public $timestamps = false;
 
     public function users()
     {
