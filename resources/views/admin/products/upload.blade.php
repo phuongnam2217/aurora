@@ -95,7 +95,7 @@
                     @foreach($product->images as $image)
                         <div class="col-3">
                             <div class="card-body">
-                                <img width="100%" src="{{asset('images/'.$image->image)}}" alt="">
+                                <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
                             </div>
                             <a href="javascript:void(0)" data-id="{{$product->id}}" data-target="{{$image->id}}" class="text-center d-block remove-image">Remove</a>
                         </div>

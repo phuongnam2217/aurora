@@ -17,12 +17,12 @@ class RingsController extends Controller
     public function sortPagination($sort,$order,$value)
     {
         if($sort == "default" && $order == "default"){
-            $products = Product::where('category_id','=',4)->where('status',1)->paginate($value);
+            $products = Product::where('category_id','=',3)->where('status',1)->paginate($value);
             $sorts = $sort;
             $orders = $order;
             return view('customer.categories.rings',compact('products','sorts','orders','value'));
         }
-        $products = Product::where('category_id','=',4)
+        $products = Product::where('category_id','=',3)
             ->where('status',1)
             ->orderBy($sort,$order)
             ->paginate($value);

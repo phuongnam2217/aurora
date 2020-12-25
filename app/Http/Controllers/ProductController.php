@@ -10,6 +10,7 @@ use App\Models\Material;
 use App\Models\Plating;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\DataTables;
 
 class ProductController extends Controller
@@ -95,24 +96,25 @@ class ProductController extends Controller
     public function upload(Request $request,$id)
     {
         $image = new Image();
-        $file = $request->file('file');
-        $fileName = time().".".$file->extension();
-        $file->move(public_path('images'),$fileName);
-        $image->image = $fileName;
+//        $file = $request->file('file');
+//        $fileName = time().".".$file->extension();
+//        $file->move(public_path('images'),$fileName);
+        $filename = $request->file('file')->store('public/images');
+        $image->image = $filename;
         $image->product_id = $id;
         $image->save();
     }
     public function removeImage($id,$image_id)
     {
         $image = Image::where('id',$image_id)->where('product_id',$id)->first();
-        unlink('images/'.$image->image);
+        Storage::delete($image->image);
         $image->delete();
         $product = $this->productService->findById($id);
         $output = "";
         foreach ($product->images as $image){
             $output .= '<div class="col-3">'.
                 '<div class="card-body">'.
-                '<img width="100%" src="'.asset('images')."/".$image->image.'" alt="">'.
+                '<img width="100%" src="'.asset($image->getNameImage()).'" alt="">'.
                 '</div>'.
                 '<a href="javascript:void(0)" data-id="'.$product->id.'" data-target="'.$image->id.'" class="text-center d-block remove-image">Remove</a>'.
                 '</div>';

@@ -57,7 +57,7 @@
                         <div class="cart-body">
                             <a href="{{route('home.detailProduct',$product->id)}}">
                                 @foreach($product->images as $key => $image)
-                                    <img src="{{asset('images/'.$image->image)}}" alt="">
+                                    <img src="{{asset($image->getNameImage())}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>
@@ -84,7 +84,7 @@
                         <div class="cart-body">
                             <a href="{{route('necklaces.index')}}">
                                 @foreach($necklace->images as $key => $image)
-                                    <img width="100%" src="{{asset('images/'.$image->image)}}" alt="">
+                                    <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>
@@ -99,7 +99,7 @@
                        <div class="cart-body">
                            <a href="{{route('earrings.index')}}">
                                @foreach($earring->images as $key => $image)
-                                   <img width="100%" src="{{asset('images/'.$image->image)}}" alt="">
+                                   <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
                                    @break(0)
                                @endforeach
                            </a>
@@ -113,7 +113,7 @@
                         <div class="cart-body">
                             <a href="{{route('rings.index')}}">
                                 @foreach($ring->images as $key => $image)
-                                    <img width="100%" src="{{asset('images/'.$image->image)}}" alt="">
+                                    <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>
@@ -127,7 +127,7 @@
                         <div class="cart-body">
                             <a href="{{route('bracelets-bangles.index')}}">
                                 @foreach($braceletsAndBangles->images as $key => $image)
-                                    <img width="100%" src="{{asset('images/'.$image->image)}}" alt="">
+                                    <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>
@@ -151,7 +151,7 @@
                         <div class="cart-body">
                             <a href="{{route('home.detailProduct',$product->id)}}">
                                 @foreach($product->images as $key => $image)
-                                    <img src="{{asset('images/'.$image->image)}}" alt="">
+                                    <img src="{{asset($image->getNameImage())}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>

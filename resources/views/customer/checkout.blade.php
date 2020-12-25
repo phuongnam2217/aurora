@@ -92,7 +92,7 @@
                     @foreach($cart->items as $item)
                         <div class="row item">
                             <div class="col-4 align-self-center"><img class="img-fluid"
-                                                                      src="{{asset('images/'.$item['product']->images[0]->image)}}">
+                                                                      src="{{asset($item['product']->images[0]->getNameImage())}}">
                             </div>
                             <div class="col-8">
                                 <div class="row"><b>$ {{$item['product']->price}}</b></div>

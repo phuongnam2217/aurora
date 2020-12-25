@@ -17,12 +17,12 @@ class BraceletsController extends Controller
     public function sortPagination($sort,$order,$value)
     {
         if($sort == "default" && $order == "default"){
-            $products = Product::where('category_id','=',5)->where('status',1)->paginate($value);
+            $products = Product::where('category_id','=',4)->where('status',1)->paginate($value);
             $sorts = $sort;
             $orders = $order;
             return view('customer.categories.bracelets',compact('products','sorts','orders','value'));
         }
-        $products = Product::where('category_id','=',5)
+        $products = Product::where('category_id','=',4)
             ->where('status',1)
             ->orderBy($sort,$order)
             ->paginate($value);

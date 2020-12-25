@@ -15,13 +15,13 @@
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9">
                                     <img id="page-img" width="100%"
-                                         src="{{asset('images/'.$product->images[0]->image)}}"
+                                         src="{{asset($product->images[0]->getNameImage())}}"
                                          alt="">
                                 </div>
                                 <div class="row">
                                     <div class="owl-carousel">
                                         @foreach($product->images as $images)
-                                            <img class="change-img" src="{{asset('images/'.$images->image)}}" alt="">
+                                            <img class="change-img" src="{{asset($images->getNameImage())}}" alt="">
                                         @endforeach
                                     </div>
                                 </div>

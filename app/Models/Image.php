@@ -15,4 +15,7 @@ class Image extends Model
     {
         return $this->belongsTo(Product::class);
     }
+    function getNameImage(){
+        return '/storage/images/' .ltrim($this->image, '/public/images/');
+    }
 }

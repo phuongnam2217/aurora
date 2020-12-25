@@ -5,8 +5,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BraceletsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BraceletsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EarringsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EarringsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NeckLacesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NeckLacesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RingsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/products/upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/products/upload.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/categories/bracelets.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/categories/bracelets.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/categories/earrings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/categories/earrings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/categories/necklaces.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/categories/necklaces.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/categories/rings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/categories/rings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/products/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/products/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/customer/products/view_modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/products/view_modal.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +229,8 @@
       <workItem from="1608772791365" duration="15649000" />
       <workItem from="1608818150749" duration="7206000" />
       <workItem from="1608858711656" duration="7122000" />
-      <workItem from="1608883583823" duration="7652000" />
+      <workItem from="1608883583823" duration="8217000" />
+      <workItem from="1608895528196" duration="2886000" />
     </task>
     <servers />
   </component>

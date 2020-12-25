@@ -15,7 +15,6 @@ class HomeController extends Controller
         $earring = Product::where('category_id',2)->orderBy('created_at','desc')->first();
         $ring = Product::where('category_id',3)->orderBy('created_at','desc')->first();
         $braceletsAndBangles = Product::where('category_id',4)->orderBy('created_at','desc')->first();
-//        dd($necklace);
         return view('customer.index',compact('products','bestSeller','necklace','earring','ring','braceletsAndBangles'));
     }
 
