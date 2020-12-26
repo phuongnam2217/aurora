@@ -48,7 +48,7 @@
     }
 }
 .filter-product {
-    padding-top: 10px;
+    padding-top: 40px;
 }
 
 .sort {
@@ -81,7 +81,7 @@ select {
 }
 
 .list-options {
-    margin-left: 40px;
+    /*margin-left: 40px;*/
 }
 
 .pagi {

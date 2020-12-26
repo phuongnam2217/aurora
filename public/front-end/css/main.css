@@ -246,12 +246,12 @@ header {
 }
 @media screen and (max-width: 414px) {
     .content {
-        margin-top: 32px;
+        margin-top: 42px;
     }
 
     .sub {
-        height: 96vh;
-        top: 4vh;
+        height: 94vh;
+        top: 6vh;
     }
 }
 
