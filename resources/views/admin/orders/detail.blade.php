@@ -127,7 +127,7 @@
                             @foreach($order->products as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
-                                    <td><img width="100px" src="{{asset('images/'.$item->images[0]->image)}}" alt=""></td>
+                                    <td><img width="100px" src="{{asset($item->images[0]->getNameImage())}}" alt=""></td>
                                     <td>
                                         {{$item->name}}
                                     </td>

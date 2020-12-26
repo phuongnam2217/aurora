@@ -99,7 +99,7 @@ class ProductController extends Controller
         $file = $request->file('file');
 //        $fileName = time().".".$file->extension();
 //        $file->move(public_path('images'),$fileName);
-        $filename = $file->store('public');
+        $filename = Storage::disk('s3')->put('images', $request->file, 'public');
         $image->image = $filename;
         $image->product_id = $id;
         $image->save();
@@ -107,7 +107,7 @@ class ProductController extends Controller
     public function removeImage($id,$image_id)
     {
         $image = Image::where('id',$image_id)->where('product_id',$id)->first();
-        Storage::delete($image->image);
+        Storage::disk('s3')->delete($image->image);
         $image->delete();
         $product = $this->productService->findById($id);
         $output = "";

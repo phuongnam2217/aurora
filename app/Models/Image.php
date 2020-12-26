@@ -16,6 +16,6 @@ class Image extends Model
         return $this->belongsTo(Product::class);
     }
     function getNameImage(){
-        return '/storage/' .ltrim($this->image, 'public/');
+        return 'https://storagecase3.s3.amazonaws.com/' .$this->image;
     }
 }
