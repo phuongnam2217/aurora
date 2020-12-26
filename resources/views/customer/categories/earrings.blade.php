@@ -8,7 +8,7 @@
         <div class="patern">
             <div class="container-fluid px-3">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 menu-left">
                         <div class="box">
                             <div class="box-title">Sort By</div>
                             <ul class="list-group">

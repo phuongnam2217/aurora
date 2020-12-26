@@ -10,7 +10,6 @@
 }
 .list-group-item{
     padding-top: 10px;
-
 }
 .list-group-item a{
     display: block;
@@ -43,7 +42,7 @@
     .sort-hidden{
         display: block;
     }
-    .box{
+    .box,.menu-left{
         display: none;
     }
 }
