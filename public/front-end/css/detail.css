@@ -21,6 +21,12 @@
     font-size: 3.1rem;
     z-index: 100;
 }
+@media screen and (max-width: 548px) {
+    #title-page{
+        top: 40%;
+        font-size: 2rem;
+    }
+}
 
 .change-img {
     cursor: pointer;
