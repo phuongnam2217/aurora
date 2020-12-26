@@ -116,7 +116,7 @@
                                     <div class="col-md-12">
                                         <div class="row">
                                             @foreach($products as $product)
-                                                <div class="col-6 col-lg-4 p-5">
+                                                <div class="col-6 col-lg-4">
                                                     <div class="product-grid">
                                                         <div class="product-image">
                                                             <a href="{{route('home.detailProduct',$product->id)}}">

@@ -90,7 +90,7 @@
                             </a>
                         </div>
                         <b>
-                            <a href="{{route('necklaces.index')}}" class="animation2" tabindex="-1">Shop Necklaces &gt;</a>
+                            <a href="{{route('necklaces.index')}}" class="animation2" tabindex="-1">Shop Necklaces</a>
                         </b>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                            </a>
                        </div>
                        <b><a href="{{{route('earrings.index')}}}"
-                             class="animation2" tabindex="-1">Shop Earrings &gt;</a></b>
+                             class="animation2" tabindex="-1">Shop Earrings</a></b>
                    </div>
                </div>
                 <div class="col-6 col-md-3">
@@ -119,7 +119,7 @@
                             </a>
                         </div>
                         <b><a href="{{route('rings.index')}}"
-                              class="animation2" tabindex="-1">Shop Rings &gt;</a></b>
+                              class="animation2" tabindex="-1">Shop Rings</a></b>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -133,7 +133,7 @@
                             </a>
                         </div>
                         <b><a href="{{route('bracelets-bangles.index')}}"
-                              class="animation2" tabindex="-1">Shop Bacelets & Bangles &gt;</a></b>
+                              class="animation2" tabindex="-1">Shop Bacelets & Bangles</a></b>
                     </div>
                 </div>
             </div>
