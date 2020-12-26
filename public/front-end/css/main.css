@@ -215,8 +215,8 @@ header {
     .sub {
         position: absolute;
         right: 0;
-        height: 93vh;
-        top: 7vh;
+        height: 95vh;
+        top: 5vh;
         display: flex;
         align-items: center;
         flex-direction: column;
