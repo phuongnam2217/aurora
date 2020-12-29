@@ -73,7 +73,7 @@
             <div class="tab-pane tabs-animation fade active show" id="tab-content-1" role="tabpanel">
                 <div class="main-card mb-3 card">
                     <div class="card-body">
-                        <form action="{{route('products.update',$product->id)}}" class="" method="post">
+                        <form action="{{route('products.update',$product->id)}}" method="post">
                             @csrf
                             <div class="position-relative row form-group">
                                 <label for="exampleEmail" class="col-sm-2 col-form-label">Name</label>

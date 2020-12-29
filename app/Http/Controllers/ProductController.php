@@ -59,9 +59,10 @@ class ProductController extends Controller
         return view('admin.products.edit',compact('product','categories','materials','platings'));
     }
 
-    public function update(ProductRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $product = $this->productService->findById($id);
+//        dd($product);
 
         $this->productService->update($request,$product);
 
