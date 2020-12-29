@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                             <div class="position-relative row form-group">
-                                <label for="exampleSelect" class="col-sm-2 col-form-label">Category</label>
+                                <label for="exampleSelect" class="col-sm-2 col-form-label">Material</label>
                                 <div class="col-sm-10">
                                     <select name="material" id="exampleSelect" class="form-control">
                                         @foreach($materials as $material)
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="position-relative row form-group">
-                                <label for="exampleSelect" class="col-sm-2 col-form-label">Category</label>
+                                <label for="exampleSelect" class="col-sm-2 col-form-label">Plating</label>
                                 <div class="col-sm-10">
                                     <select name="plating" id="exampleSelect" class="form-control">
                                         @foreach($platings as $plating)
