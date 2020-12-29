@@ -108,7 +108,7 @@
 @section('js')
     <script type="text/javascript">
         Dropzone.options.uploadImage = {
-            maxFilesize         :       1,
+            maxFilesize         :       10,
             acceptedFiles: ".jpeg,.jpg,.png,.gif"
         };
     </script>
