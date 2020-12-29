@@ -106,6 +106,12 @@
     </div>
 @endsection
 @section('js')
+    <script type="text/javascript">
+        Dropzone.options.uploadImage = {
+            maxFilesize         :       1,
+            acceptedFiles: ".jpeg,.jpg,.png,.gif"
+        };
+    </script>
     <script>
         $(document).ready(function (){
             $('#updateImg').click(function () {

@@ -14,7 +14,9 @@ i {
     font-size: 2.5rem;
     color: #7d7a7a;
 }
-
+img{
+    max-width: 100%;
+}
 button:focus, input:focus, select:focus, option:focus {
     outline: none;
 }
