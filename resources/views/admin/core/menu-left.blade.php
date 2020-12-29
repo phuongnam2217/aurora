@@ -42,12 +42,14 @@
                     </a>
                 </li>
                 <li class="app-sidebar__heading">Manage</li>
+                @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstant::ROLE_ADMIN)
                 <li>
                     <a href="{{route('users.index')}}">
                         <i class="metismenu-icon pe-7s-users"></i>
                         Manage Users
                     </a>
                 </li>
+                @endif
                 <li>
                     <a href="{{route('categories.index')}}">
                         <i class="metismenu-icon pe-7s-bookmarks"></i>
