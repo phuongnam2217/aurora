@@ -216,7 +216,7 @@
                             <div class="row py-2">
                                 <div class="col-4 d-flex justify-content-center">
                                     <a href="{{route('home.detailProduct',$item['product']->id)}}" target="_blank">
-                                        <img width="100px" src="{{asset('images/'.$item['product']->images[0]->image)}}"
+                                        <img width="100px" src="{{$item['product']->images[0]->getNameImage()}}"
                                              alt="" title="">
                                     </a>
                                 </div>

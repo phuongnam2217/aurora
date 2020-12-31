@@ -68,8 +68,8 @@
                                                     <div class="product-grid">
                                                         <div class="product-image">
                                                             <a href="{{route('home.detailProduct',$product->id)}}">
-                                                                <img class="pic-1" src="{{asset('/images/'.$product->images[0]->getNameImage())}}">
-                                                                <img class="pic-2" src="{{asset('/images/'.$product->images[1]->getNameImage())}}">
+                                                                <img class="pic-1" src="{{$product->images[0]->getNameImage()}}">
+                                                                <img class="pic-2" src="{{$product->images[1]->getNameImage()}}">
                                                             </a>
                                                         </div>
                                                         <div class="product-content">
