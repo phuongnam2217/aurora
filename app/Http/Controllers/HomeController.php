@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -11,25 +12,24 @@ class HomeController extends Controller
     {
         $products = Product::where('status','1')->orderBy('id','desc')->take(10)->get();
         $bestSeller = Product::where('status','1')->orderBy('sold','desc')->take(10)->get();
-        $necklace = Product::where('category_id',1)->orderBy('created_at','desc')->first();
-        $earring = Product::where('category_id',2)->orderBy('created_at','desc')->first();
-        $ring = Product::where('category_id',3)->orderBy('created_at','desc')->first();
-        $braceletsAndBangles = Product::where('category_id',4)->orderBy('created_at','desc')->first();
-        return view('customer.index',compact('products','bestSeller','necklace','earring','ring','braceletsAndBangles'));
+        $categories = Category::all();
+        return view('customer.index',compact('products','categories','bestSeller'));
     }
 
     public function detailProduct($id)
     {
+        $categories = Category::all();
         $product = Product::findOrFail($id);
         $view = $product->view;
         $view++;
         $product->view = $view;
         $product->save();
-        return view('customer.products.detail',compact('product'));
+        return view('customer.products.detail',compact('categories','product'));
     }
 
     public function search(Request $request)
     {
+        $categories = Category::all();
         $search = $request->search;
         $products = Product::where('name','LIKE',"%$search%")->get();
         if($search == null)
@@ -37,7 +37,7 @@ class HomeController extends Controller
             $products = null;
         }
 
-        return view('customer.products.search',compact('products'));
+        return view('customer.products.search',compact('categories','products'));
     }
 
 }

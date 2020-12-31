@@ -78,64 +78,22 @@
             </div>
         </div>
         <div class="layout">
-            <div class="row">
-                <div class="col-6 col-md-3">
+            <div class="owl-carousel owl-theme">
+                @foreach($categories as $category)
                     <div class="cart">
                         <div class="cart-body">
-                            <a href="{{route('necklaces.index')}}">
-                                @foreach($necklace->images as $key => $image)
-                                    <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
+                            <a href="{{route('auroses-series.index')}}">
+                                @foreach($category->products as $key => $product)
+                                    <img src="{{asset('images/'.$product->images[0]->getNameImage())}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>
                         </div>
                         <b>
-                            <a href="{{route('necklaces.index')}}" class="animation2" tabindex="-1">Shop Necklaces</a>
+                            <a href="{{route('auroses-series.index')}}" class="animation" tabindex="-1">{{$category->name}} &gt;</a>
                         </b>
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                   <div class="cart">
-                       <div class="cart-body">
-                           <a href="{{route('earrings.index')}}">
-                               @foreach($earring->images as $key => $image)
-                                   <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
-                                   @break(0)
-                               @endforeach
-                           </a>
-                       </div>
-                       <b><a href="{{{route('earrings.index')}}}"
-                             class="animation2" tabindex="-1">Shop Earrings</a></b>
-                   </div>
-               </div>
-                <div class="col-6 col-md-3">
-                    <div class="cart">
-                        <div class="cart-body">
-                            <a href="{{route('rings.index')}}">
-                                @foreach($ring->images as $key => $image)
-                                    <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
-                                    @break(0)
-                                @endforeach
-                            </a>
-                        </div>
-                        <b><a href="{{route('rings.index')}}"
-                              class="animation2" tabindex="-1">Shop Rings</a></b>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="cart">
-                        <div class="cart-body">
-                            <a href="{{route('bracelets-bangles.index')}}">
-                                @foreach($braceletsAndBangles->images as $key => $image)
-                                    <img width="100%" src="{{asset($image->getNameImage())}}" alt="">
-                                    @break(0)
-                                @endforeach
-                            </a>
-                        </div>
-                        <b><a href="{{route('bracelets-bangles.index')}}"
-                              class="animation2" tabindex="-1">Shop Bacelets & Bangles</a></b>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         {{--              Best Seller          --}}

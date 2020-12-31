@@ -78,10 +78,9 @@
                 </div>
                 <ul class="sub">
                     <li><a href="{{route('home.index')}}">Home</a></li>
-                    <li><a href="{{route('necklaces.index')}}">Necklaces</a></li>
-                    <li><a href="{{route('earrings.index')}}">Earrings</a></li>
-                    <li><a href="{{route('rings.index')}}">Rings</a></li>
-                    <li><a href="{{route('bracelets-bangles.index')}}">Bracelets & Bangles</a></li>
+                    @foreach($categories as $category)
+                    <li><a href="{{route('auroses-series.index',$category->id}}">{{$category->name}}</a></li>
+                    @endforeach
                     <li><a href="#footer">About us</a></li>
                 </ul>
             </div>

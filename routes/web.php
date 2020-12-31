@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArosesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BraceletsController;
 use App\Http\Controllers\CartController;
@@ -37,27 +38,32 @@ Route::middleware('checkCart')->prefix('/checkout')->group(function (){
     Route::post('/',[CheckOutController::class,'createOrder'])->name('checkout.createOrder');
 });
 
+Route::prefix('auroses-series')->group(function (){
+    Route::get('{name}',[ArosesController::class,'index'])->name('auroses-series.index');
+    Route::get('{name}/sort_by={sort}&order={order}&limit={value?}',[ArosesController::class,'sort'])->name('auroses-series.sort');
+
+});
 //Necklaces
-Route::prefix('necklaces')->group(function (){
-    Route::get('/',[NeckLacesController::class,'index'])->name('necklaces.index');
-    Route::get('/sort/{sort}/{order}',[NeckLacesController::class,'sort'])->name('necklaces.sort');
-    Route::get('/sort/{sort}/{order}/{value?}',[NeckLacesController::class,'sortPagination'])->name('necklaces.sortPagination');
-});
+//Route::prefix('necklaces')->group(function (){
+//    Route::get('/',[NeckLacesController::class,'index'])->name('necklaces.index');
+//    Route::get('/sort/{sort}/{order}',[NeckLacesController::class,'sort'])->name('necklaces.sort');
+//    Route::get('/sort/{sort}/{order}/{value?}',[NeckLacesController::class,'sortPagination'])->name('necklaces.sortPagination');
+//});
 //Rings
-Route::prefix('rings')->group(function (){
-    Route::get('/',[RingsController::class,'index'])->name('rings.index');
-    Route::get('/sort/{sort}/{order}/{value?}',[RingsController::class,'sortPagination'])->name('rings.sortPagination');
-});
+//Route::prefix('rings')->group(function (){
+//    Route::get('/',[RingsController::class,'index'])->name('rings.index');
+//    Route::get('/sort/{sort}/{order}/{value?}',[RingsController::class,'sortPagination'])->name('rings.sortPagination');
+//});
 //Earrings
-Route::prefix('earrings')->group(function (){
-    Route::get('/',[EarringsController::class,'index'])->name('earrings.index');
-    Route::get('/sort/{sort}/{order}/{value?}',[EarringsController::class,'sortPagination'])->name('earrings.sortPagination');
-});
+//Route::prefix('earrings')->group(function (){
+//    Route::get('/',[EarringsController::class,'index'])->name('earrings.index');
+//    Route::get('/sort/{sort}/{order}/{value?}',[EarringsController::class,'sortPagination'])->name('earrings.sortPagination');
+//});
 //Bracelets & Bangles
-Route::prefix('bracelets-bangles')->group(function (){
-    Route::get('/',[BraceletsController::class,'index'])->name('bracelets-bangles.index');
-    Route::get('/sort/{sort}/{order}/{value?}',[BraceletsController::class,'sortPagination'])->name('bracelets-bangles.sortPagination');
-});
+//Route::prefix('bracelets-bangles')->group(function (){
+//    Route::get('/',[BraceletsController::class,'index'])->name('bracelets-bangles.index');
+//    Route::get('/sort/{sort}/{order}/{value?}',[BraceletsController::class,'sortPagination'])->name('bracelets-bangles.sortPagination');
+//});
 
 Route::prefix('cart')->group(function (){
     Route::get('/{id}/add',[CartController::class,'addtoCart'])->name('cart.add');
