@@ -84,7 +84,7 @@
                         <div class="cart-body">
                             <a href="{{route('auroses-series.index',$category->name)}}">
                                 @foreach($category->products as $key => $product)
-                                    <img src="{{asset('images/'.$product->images[0]->getNameImage())}}" alt="">
+                                    <img src="{{$product->images[0]->getNameImage()}}" alt="">
                                     @break(0)
                                 @endforeach
                             </a>
