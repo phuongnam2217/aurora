@@ -12,16 +12,15 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="row">
-                                <div class="col-sm-3"></div>
-                                <div class="col-sm-9">
+                                <div class="col-sm-12 p-5">
                                     <img id="page-img" width="100%"
-                                         src="{{asset($product->images[0]->getNameImage())}}"
+                                         src="{{$product->images[0]->getNameImage()}}"
                                          alt="">
                                 </div>
                                 <div class="row">
                                     <div class="owl-carousel">
                                         @foreach($product->images as $images)
-                                            <img class="change-img" src="{{asset($images->getNameImage())}}" alt="">
+                                            <img class="change-img" src="{{$images->getNameImage()}}" alt="">
                                         @endforeach
                                     </div>
                                 </div>
