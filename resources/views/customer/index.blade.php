@@ -82,7 +82,7 @@
                 @foreach($categories as $category)
                     <div class="cart">
                         <div class="cart-body">
-                            <a href="{{route('auroses-series.index')}}">
+                            <a href="{{route('auroses-series.index',$category->name)}}">
                                 @foreach($category->products as $key => $product)
                                     <img src="{{asset('images/'.$product->images[0]->getNameImage())}}" alt="">
                                     @break(0)
@@ -90,7 +90,7 @@
                             </a>
                         </div>
                         <b>
-                            <a href="{{route('auroses-series.index')}}" class="animation" tabindex="-1">{{$category->name}} &gt;</a>
+                            <a href="{{route('auroses-series.index',$category->name)}}" class="animation" tabindex="-1">{{$category->name}} &gt;</a>
                         </b>
                     </div>
                 @endforeach
