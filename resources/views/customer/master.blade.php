@@ -79,7 +79,7 @@
                 <ul class="sub">
                     <li><a href="{{route('home.index')}}">Home</a></li>
                     @foreach($categories as $category)
-                    <li><a href="{{route('auroses-series.index',$category->name}}">{{$category->name}}</a></li>
+                    <li><a href="{{route('auroses-series.index',$category->name)}}">{{$category->name}}</a></li>
                     @endforeach
                     <li><a href="#footer">About us</a></li>
                 </ul>
