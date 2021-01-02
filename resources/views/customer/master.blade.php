@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="{{asset('assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
