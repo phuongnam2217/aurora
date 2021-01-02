@@ -30,13 +30,13 @@ class HomeController extends Controller
     public function search(Request $request)
     {
         $categories = Category::all();
-        $search = $request->search;
+
+        $search = strtoupper($request->search);
         $products = Product::where('name','LIKE',"%$search%")->get();
-        if($search == null)
+        if($search == "")
         {
             $products = null;
         }
-
         return view('customer.products.search',compact('categories','products'));
     }
 
