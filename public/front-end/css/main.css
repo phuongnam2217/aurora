@@ -129,15 +129,17 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .sub li a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #403f3f;
-    font-family: 'Gabriela';
+    font-family: 'Roboto';
     transition: all 0.5s ease-in;
     position: relative;
+    text-transform: uppercase;
 }
 .sub li a::after{
     content: "";
