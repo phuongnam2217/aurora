@@ -12,8 +12,8 @@ class DashBoardController extends Controller
 {
     public function index()
     {
-        $start = new Carbon('first day of last month');
-        $end = new Carbon('last day of last month');
+        $start = new Carbon('last day of last month');
+        $end = new Carbon('first day of last month');
         $startDay = new Carbon('last day');
         $endDay = new Carbon('first day');
         $orderOfDay = Order::whereBetween('created_at',[$startDay,$endDay])->get();
