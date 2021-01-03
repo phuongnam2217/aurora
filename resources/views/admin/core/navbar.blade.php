@@ -78,7 +78,7 @@
                                     <div tabindex="-1" class="dropdown-divider"></div>
                                     <a href="{{route('admin.password')}}" tabindex="0" class="dropdown-item">Change Password</a>
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <a href="{{route('admin.password')}}" tabindex="0" class="dropdown-item">Logout</a>
+                                    <a href="{{route('auth.logout')}}" tabindex="0" class="dropdown-item">Logout</a>
                                 </div>
                             </div>
                         </div>
