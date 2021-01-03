@@ -68,14 +68,17 @@
                         <div class="widget-content-left">
                             <div class="btn-group">
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                    <img width="42" class="rounded-circle" src="{{\Illuminate\Support\Facades\Auth::user()->image ? Auth::user()->image: "https://theme.hstatic.net/1000344185/1000478812/14/icon_avatar.png?v=380" }}" alt="">
+                                    <img width="42" class="rounded-circle" src="{{\Illuminate\Support\Facades\Auth::user()->image ? 'https://storagecase3.s3.amazonaws.com/'.Auth::user()->image: "https://theme.hstatic.net/1000344185/1000478812/14/icon_avatar.png?v=380" }}" alt="">
                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                    <button type="button" tabindex="0" class="dropdown-item">Change Infomation</button>
-{{--                                    <button type="button" tabindex="0" class="dropdown-item">Settings</button>--}}
+                                    <a href="{{route('admin.info')}}" tabindex="0" class="dropdown-item">Change Infomation</a>
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <a href="{{route('auth.logout')}}" tabindex="0" class="dropdown-item">Logout</a>
+                                    <a href="{{route('admin.avatar')}}" tabindex="0" class="dropdown-item">Change Avatar</a>
+                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                    <a href="{{route('admin.password')}}" tabindex="0" class="dropdown-item">Change Password</a>
+                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                    <a href="{{route('admin.password')}}" tabindex="0" class="dropdown-item">Logout</a>
                                 </div>
                             </div>
                         </div>

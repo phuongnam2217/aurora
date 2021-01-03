@@ -62,7 +62,6 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = $this->productService->findById($id);
-//        dd($product);
 
         $this->productService->update($request,$product);
 
@@ -97,7 +96,7 @@ class ProductController extends Controller
     public function upload(Request $request,$id)
     {
         $image = new Image();
-        $file = $request->file('file');
+        // $file = $request->file('file');
 //        $fileName = time().".".$file->extension();
 //        $file->move(public_path('images'),$fileName);
         $filename = Storage::disk('s3')->put('images', $request->file, 'public');

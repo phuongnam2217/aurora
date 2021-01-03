@@ -42,7 +42,6 @@ Route::middleware('checkCart')->prefix('/checkout')->group(function (){
 Route::prefix('auroses-series')->group(function (){
     Route::get('{name}',[ArosesController::class,'index'])->name('auroses-series.index');
     Route::get('{name}/sort_by={sort}&order={order}&limit={value?}',[ArosesController::class,'sort'])->name('auroses-series.sort');
-
 });
 
 Route::prefix('cart')->group(function (){
@@ -57,6 +56,12 @@ Route::post('/login',[AuthController::class,'login'])->name('auth.login');
 Route::middleware(['auth','checkAccount'])->prefix('admin')->group(function (){
     Route::get('/',[DashBoardController::class,'index'])->name('admin.dashboard');
     Route::get('logout',[AuthController::class,'logout'])->name('auth.logout');
+    Route::get('/info',[DashBoardController::class,'info'])->name('admin.info');
+    Route::post('/updateInfo/{id}',[DashBoardController::class,'update'])->name('admin.update');
+    Route::get('password',[DashBoardController::class,'password'])->name('admin.password');
+    Route::post('/updatePassword',[DashBoardController::class,'changePassword'])->name('admin.updatePassword');
+    Route::get('avatar',[DashBoardController::class,'avatar'])->name('admin.avatar');
+    Route::post('/updateAvatar',[DashBoardController::class,'changeAvatar'])->name('admin.updateAvatar');
 //User
     Route::prefix('/users')->group(function (){
         Route::get('/',[UserController::class,'index'])->name('users.index');
