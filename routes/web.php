@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\EarringsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NeckLacesController;
@@ -43,27 +44,6 @@ Route::prefix('auroses-series')->group(function (){
     Route::get('{name}/sort_by={sort}&order={order}&limit={value?}',[ArosesController::class,'sort'])->name('auroses-series.sort');
 
 });
-//Necklaces
-//Route::prefix('necklaces')->group(function (){
-//    Route::get('/',[NeckLacesController::class,'index'])->name('necklaces.index');
-//    Route::get('/sort/{sort}/{order}',[NeckLacesController::class,'sort'])->name('necklaces.sort');
-//    Route::get('/sort/{sort}/{order}/{value?}',[NeckLacesController::class,'sortPagination'])->name('necklaces.sortPagination');
-//});
-//Rings
-//Route::prefix('rings')->group(function (){
-//    Route::get('/',[RingsController::class,'index'])->name('rings.index');
-//    Route::get('/sort/{sort}/{order}/{value?}',[RingsController::class,'sortPagination'])->name('rings.sortPagination');
-//});
-//Earrings
-//Route::prefix('earrings')->group(function (){
-//    Route::get('/',[EarringsController::class,'index'])->name('earrings.index');
-//    Route::get('/sort/{sort}/{order}/{value?}',[EarringsController::class,'sortPagination'])->name('earrings.sortPagination');
-//});
-//Bracelets & Bangles
-//Route::prefix('bracelets-bangles')->group(function (){
-//    Route::get('/',[BraceletsController::class,'index'])->name('bracelets-bangles.index');
-//    Route::get('/sort/{sort}/{order}/{value?}',[BraceletsController::class,'sortPagination'])->name('bracelets-bangles.sortPagination');
-//});
 
 Route::prefix('cart')->group(function (){
     Route::get('/{id}/add',[CartController::class,'addtoCart'])->name('cart.add');
@@ -75,9 +55,7 @@ Route::prefix('cart')->group(function (){
 Route::get('login',[AuthController::class,'showFormLogin'])->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('auth.login');
 Route::middleware(['auth','checkAccount'])->prefix('admin')->group(function (){
-    Route::get('/',function (){
-       return view('admin.dashboard');
-    })->name('admin.dashboard');
+    Route::get('/',[DashBoardController::class,'index'])->name('admin.dashboard');
     Route::get('logout',[AuthController::class,'logout'])->name('auth.logout');
 //User
     Route::prefix('/users')->group(function (){
