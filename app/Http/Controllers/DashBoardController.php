@@ -20,8 +20,8 @@ class DashBoardController extends Controller
     {
         $start = Carbon::now()->startOfMonth();
         $end = Carbon::now()->endOfMonth();
-        $startDay = new Carbon('last day');
-        $endDay = new Carbon('first day');
+        $startDay = Carbon::now()->startOfDay();
+        $endDay = Carbon::now()->endOfDay();
         $orderOfDay = Order::whereBetween('created_at',[$startDay,$endDay])->get();
         $orderOfMonth = Order::whereBetween('created_at',[$start,$end])->get();
         $products = Product::where('stock',">",0)->get();
