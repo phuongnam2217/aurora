@@ -65,16 +65,25 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
-        $category = $this->categoryService->findById($id);
-        $this->categoryService->update($request,$category);
-        return response()->json(['success'=>'Edit Category Successfully']);
+        $validator = Validator::make($request->all(),[
+            'name'=>'required'
+         ]);
+        if($validator->passes()){
+            $category = $this->categoryService->findById($id);
+            $this->categoryService->update($request,$category);
+            return response()->json(['success'=>'Edit Category Successfully']);
+        } 
+        return response()->json(['error'=>$validator->errors()->messages()]);
     }
 
 
     public function destroy($id)
     {
         $category = $this->categoryService->findById($id);
-        $this->categoryService->delete($category);
+        if(!count($category->products) > 0){
+            $this->categoryService->delete($category);
         return response()->json(['success'=>"Category deleted successfully."]);
+        }
+        return response()->json(['error'=>"You should remove products in this category before deleting the category"]);
     }
 }

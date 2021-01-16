@@ -205,9 +205,17 @@
                         type: "POST",
                         dataType: 'JSON',
                         success: function (data) {
-                            console.log(data.success);
-                            toastr.success(data.success);
-                            $('#modal-category').modal('hide');
+                            // console.log(data.success);
+                            // toastr.success(data.success);
+                            // $('#modal-category').modal('hide');
+                            if (data.success) {
+                                toastr.success(data.success);
+                                $('#modal-category').modal('hide');
+                            } else {
+                                console.log(data.error);
+                                $("#nameErr").html(data.error.name);
+                                $("#name").addClass('is-invalid');
+                            }
                         }
                     })
                 }
@@ -235,7 +243,11 @@
                 $.get("{{route('categories.index')}}" + "/" + user_id + "/delete", function (data) {
                     $("#modalDelete").modal('hide')
                     table.draw();
-                    toastr.success(data.success);
+                    if(data.error){
+                        toastr.error(data.error);
+                    }else{
+                        toastr.success(data.success);
+                    }
                 })
             })
             $('body').on('click', '.editStatus', function () {

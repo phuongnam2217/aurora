@@ -35,9 +35,6 @@
                             <div class="burger">
                                 <i class="fas fa-bars"></i>
                             </div>
-                            {{--                            <div class="header-login">--}}
-                            {{--                                <i class="fas fa-user"></i>--}}
-                            {{--                            </div>--}}
                         </div>
                     </div>
                     <div class="col-3">
